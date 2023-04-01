@@ -12,7 +12,15 @@
         <span class="glyphicon glyphicon-ok"></span>
         </button>
                 </div>
+                <span>
+                    {{tasks | json}}
+                </span>
             </div>
         </div>
     </div>
+    <ul class="list-group">
+        <li *ngFor="let task of tasks" class="list-group-item">
+            <span> {{ task.name }} </span>
+        </li>
+    </ul>
 </div>
